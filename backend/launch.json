@@ -1,0 +1,21 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",     //usamos attach para que o debug funcione após a aplicaçao ja estar rodando
+      "protocol": "inspector", //inspeciona o codigo node(carece flag --inspect no dev:server)
+      "restart": true,
+      "name": "Debug teste",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    }
+  ]
+}
