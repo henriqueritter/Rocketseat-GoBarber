@@ -10,8 +10,8 @@ import AppointmentsRepository from '@modules/appointments/infra/typeorm/reposito
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 
-// import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
-// import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
+import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
+import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
 
 // utilizamos o registerSingleton para ele instanciar esse objeto uma vez só para toda
 // a vida da aplicacao
@@ -23,4 +23,9 @@ container.registerSingleton<IAppointmentsRepository>( // vai garantir que a vari
 container.registerSingleton<IUsersRepository>( // vai garantir que a variavel que passamos no segundo parameto tenha o formato da Interface
   'UsersRepository', // o nome aqui nao importa
   UsersRepository,
+);
+
+container.registerSingleton<IUserTokensRepository>(
+  'UserTokensRepository',
+  UserTokensRepository,
 );
