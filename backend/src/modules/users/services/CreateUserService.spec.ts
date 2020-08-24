@@ -3,16 +3,21 @@ import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import CreateUserService from './CreateUserService';
 
-describe('CreateUser', () => {
-  it('should be able to create a new user', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeHashProvider = new FakeHashProvider();
+let fakeUsersRepository: FakeUsersRepository;
+let fakeHashProvider: FakeHashProvider;
+let createUser: CreateUserService;
 
-    const createUser = new CreateUserService(
+describe('CreateUser', () => {
+  beforeEach(() => {
+    fakeUsersRepository = new FakeUsersRepository();
+    fakeHashProvider = new FakeHashProvider();
+
+    createUser = new CreateUserService(
       fakeUsersRepository, // essa instancia esta esperando uma interface de repository por isso instaciamos o fake repositorio acima
       fakeHashProvider,
     );
-
+  });
+  it('should be able to create a new user', async () => {
     const user = await createUser.execute({
       name: 'Henrique',
       email: 'fulano@fulano.com',
@@ -23,13 +28,6 @@ describe('CreateUser', () => {
   });
 
   it('should be not able to create a new user with same email from another one', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeHashProvider = new FakeHashProvider();
-    const createUser = new CreateUserService(
-      fakeUsersRepository, // essa instancia esta esperando uma interface de repository por isso instaciamos o fake repositorio acima
-      fakeHashProvider,
-    );
-
     const user = await createUser.execute({
       name: 'Henrique',
       email: 'fulano@fulano.com',
@@ -38,7 +36,7 @@ describe('CreateUser', () => {
 
     expect(user).toHaveProperty('id');
 
-    expect(
+    await expect(
       createUser.execute({
         name: 'Henrique',
         email: 'fulano@fulano.com',
