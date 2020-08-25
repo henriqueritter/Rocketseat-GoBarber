@@ -110,4 +110,14 @@ describe('UpdateProfile', () => {
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
+
+  it('should not be able to update the profile from non-existing user', async () => {
+    await expect(
+      updateProfile.execute({
+        user_id: 'c87a8d7ac65549f9bd2716163952885b',
+        name: 'Test',
+        email: 'test@teste.com',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
 });
