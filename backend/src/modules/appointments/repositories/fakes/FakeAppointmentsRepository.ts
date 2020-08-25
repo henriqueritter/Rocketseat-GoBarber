@@ -50,11 +50,12 @@ class AppointmentsRepository implements IAppointmentsRepository {
 
   public async create({
     provider_id,
+    user_id,
     date,
   }: ICreateAppointmentDTO): Promise<Appointment> {
     const appointment = new Appointment();
     // Maneira de setar valores a props de um obj
-    Object.assign(appointment, { id: uuid(), date, provider_id });
+    Object.assign(appointment, { id: uuid(), date, provider_id, user_id });
     // appointment.id = uuid();
     // appointment.date = date;
     // appointment.provider_id = provider_id;
