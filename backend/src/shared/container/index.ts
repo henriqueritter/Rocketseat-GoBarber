@@ -13,6 +13,9 @@ import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepo
 import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
 import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
 
+import INotificationsRepository from '@modules/notifications/repositories/INotificationsRepository';
+import NotificationsRepository from '@modules/notifications/infra/typeorm/repositories/NotificationsRepository';
+
 // utilizamos o registerSingleton para ele instanciar esse objeto uma vez só para toda
 // a vida da aplicacao
 container.registerSingleton<IAppointmentsRepository>( // vai garantir que a variavel que passamos no segundo parameto tenha o formato da Interface
@@ -28,4 +31,9 @@ container.registerSingleton<IUsersRepository>( // vai garantir que a variavel qu
 container.registerSingleton<IUserTokensRepository>(
   'UserTokensRepository',
   UserTokensRepository,
+);
+
+container.registerSingleton<INotificationsRepository>(
+  'NotificationsRepository',
+  NotificationsRepository,
 );
