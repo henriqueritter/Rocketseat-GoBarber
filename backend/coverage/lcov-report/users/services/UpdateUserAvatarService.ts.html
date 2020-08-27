@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>61/61</span>
+                <span class='fraction'>0/61</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.83% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>51/71</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>14/16</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>61/61</span>
+                <span class='fraction'>0/61</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -118,128 +118,128 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import path from 'path';
-import fs from 'fs'; // filesystem do Node
-import uploadConfig from '@config/upload';
-&nbsp;
-import AppError from '@shared/errors/AppError';
-&nbsp;
-import User from '@modules/users/infra/typeorm/entities/User';
-&nbsp;
-import { injectable, inject } from 'tsyringe';
-&nbsp;
-import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';
-import IUsersRepository from '../repositories/IUsersRepository';
-&nbsp;
-interface IRequest {
-  user_id: string;
-  avatarFilename: string;
-}
-&nbsp;
-@injectable()
-class UpdateUserAvatarService {
-  // dependency inversion
-  constructor(
-    @inject('UsersRepository')
-    private usersRepository: IUsersRepository,
-&nbsp;
-    @inject('StorageProvider')
-    private storageProvider: IStorageProvider,
-  ) {}
-&nbsp;
-  public async execute({ user_id, avatarFilename }: IRequest): Promise&lt;User&gt; {
-    // ira procurar um usuario pela ID
-    const user = await this.usersRepository.findById(user_id);
-&nbsp;
-    if (!user) {
-      throw new AppError('Only authenticated users can change avatar', 401);
-    }
-&nbsp;
-    if (user.avatar) {
-      await this.storageProvider.deleteFile(user.avatar);
-      // // Delete avatar anterior
-      // const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);
-      // // retorna se o usuario tinha avatar ou nao, funcao stat retorna status de um arquivo(se existir)
-      // const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath);
-      // // se tinha avatar ele remove
-      // if (userAvatarFileExists) {
-      //   await fs.promises.unlink(userAvatarFilePath);
-      // }
-    }
-    // se nao entrou no IF acima entao atualizara o avatar abaixo
-    const filename = await this.storageProvider.saveFile(avatarFilename);
-    // o campo avatar do usuario atual (da instancia criada) sera atualizado para a nova imagem
-    user.avatar = filename;
-&nbsp;
-    // o metodo save do TypeORM ira Atualizar o usuario pois a sua ID ja existe
-    await this.usersRepository.save(user);
-&nbsp;
-    return user;
-  }
-}
-&nbsp;
-export default UpdateUserAvatarService;<span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import path from 'path';</span></span></span>
+<span class="cstat-no" title="statement not covered" >import fs from 'fs'; // filesystem do Node</span>
+<span class="cstat-no" title="statement not covered" >import uploadConfig from '@config/upload';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import AppError from '@shared/errors/AppError';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import User from '@modules/users/infra/typeorm/entities/User';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import { injectable, inject } from 'tsyringe';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';</span>
+<span class="cstat-no" title="statement not covered" >import IUsersRepository from '../repositories/IUsersRepository';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >interface IRequest {</span>
+<span class="cstat-no" title="statement not covered" >  user_id: string;</span>
+<span class="cstat-no" title="statement not covered" >  avatarFilename: string;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >@injectable()</span>
+<span class="cstat-no" title="statement not covered" >class UpdateUserAvatarService {</span>
+<span class="cstat-no" title="statement not covered" >  // dependency inversion</span>
+<span class="cstat-no" title="statement not covered" >  constructor(</span>
+<span class="cstat-no" title="statement not covered" >    @inject('UsersRepository')</span>
+<span class="cstat-no" title="statement not covered" >    private usersRepository: IUsersRepository,</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    @inject('StorageProvider')</span>
+<span class="cstat-no" title="statement not covered" >    private storageProvider: IStorageProvider,</span>
+<span class="cstat-no" title="statement not covered" >  ) {}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  public async execute({ user_id, avatarFilename }: IRequest): Promise&lt;User&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    // ira procurar um usuario pela ID</span>
+<span class="cstat-no" title="statement not covered" >    const user = await this.usersRepository.findById(user_id);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (!user) {</span>
+<span class="cstat-no" title="statement not covered" >      throw new AppError('Only authenticated users can change avatar', 401);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (user.avatar) {</span>
+<span class="cstat-no" title="statement not covered" >      await this.storageProvider.deleteFile(user.avatar);</span>
+<span class="cstat-no" title="statement not covered" >      // // Delete avatar anterior</span>
+<span class="cstat-no" title="statement not covered" >      // const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);</span>
+<span class="cstat-no" title="statement not covered" >      // // retorna se o usuario tinha avatar ou nao, funcao stat retorna status de um arquivo(se existir)</span>
+<span class="cstat-no" title="statement not covered" >      // const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath);</span>
+<span class="cstat-no" title="statement not covered" >      // // se tinha avatar ele remove</span>
+<span class="cstat-no" title="statement not covered" >      // if (userAvatarFileExists) {</span>
+<span class="cstat-no" title="statement not covered" >      //   await fs.promises.unlink(userAvatarFilePath);</span>
+<span class="cstat-no" title="statement not covered" >      // }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    // se nao entrou no IF acima entao atualizara o avatar abaixo</span>
+<span class="cstat-no" title="statement not covered" >    const filename = await this.storageProvider.saveFile(avatarFilename);</span>
+<span class="cstat-no" title="statement not covered" >    // o campo avatar do usuario atual (da instancia criada) sera atualizado para a nova imagem</span>
+<span class="cstat-no" title="statement not covered" >    user.avatar = filename;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // o metodo save do TypeORM ira Atualizar o usuario pois a sua ID ja existe</span>
+<span class="cstat-no" title="statement not covered" >    await this.usersRepository.save(user);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return user;</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >export default UpdateUserAvatarService;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -247,7 +247,7 @@ export default UpdateUserAvatarService;<span class="fstat-no" title="function no
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Aug 26 2020 13:36:42 GMT-0300 (GMT-03:00)
+                at Thu Aug 27 2020 00:08:24 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../prettify.js"></script>
