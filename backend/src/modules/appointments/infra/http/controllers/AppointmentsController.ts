@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { parseISO } from 'date-fns';
 import { container } from 'tsyringe';
 // injecao de dependencia
 
@@ -11,15 +10,13 @@ export default class AppointmentController {
     const user_id = request.user.id;
     const { provider_id, date } = request.body;
 
-    const parsedDate = parseISO(date);
-
     const createAppointment = container.resolve(CreateAppointmentService); // o container resolve vai carregar o serice e verificar se precisa de alguma dependencia
     // se precisar ele vai retornar
 
     const appointment = await createAppointment.execute({
       provider_id,
       user_id,
-      date: parsedDate,
+      date,
     });
     return response.json(appointment);
     // se houver algum erro no execute(retornado pelo throw) ele executara nesse catch

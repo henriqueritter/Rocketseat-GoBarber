@@ -3,6 +3,7 @@ import AppError from '@shared/errors/AppError';
 import { inject, injectable } from 'tsyringe';
 
 import User from '@modules/users/infra/typeorm/entities/User';
+import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 // importamos a interface pois nao devemos importar o provider diretamente, e assim injetamos abaixo
@@ -23,6 +24,9 @@ class CreateUserService {
 
     @inject('HashProvider')
     private hashProvider: IHashProvider, // importamos a interface para a injecao de dependencia
+
+    @inject('CacheProvider')
+    private cacheProvider: ICacheProvider,
   ) {}
 
   public async execute({ name, email, password }: IRequestUser): Promise<User> {
@@ -38,6 +42,9 @@ class CreateUserService {
       email,
       password: hashedPassword,
     });
+
+    // remove o cache
+    await this.cacheProvider.invalidatePrefix('providers-list');
 
     return user;
   }
