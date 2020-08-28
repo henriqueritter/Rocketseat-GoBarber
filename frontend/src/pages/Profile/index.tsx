@@ -74,6 +74,7 @@ const Profile: React.FC = () => {
           password_confirmation,
         } = data;
 
+        //form data para caso ele preencha a senha, se preencher entao envia com a senha
         const formData = {
           name,
           email,
