@@ -6,10 +6,12 @@ export const Container = styled.div``;
 export const Header = styled.header`
   padding: 30px 0;
   background: #28262e;
+  height: 144px;
 `;
 
 export const HeaderContent = styled.div`
   max-width: 1120px;
+
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -52,8 +54,13 @@ export const Profile = styled.div`
       color: #f4ede8;
     }
 
-    strong {
+    a {
+      text-decoration: none;
       color: #ff9000;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 `;

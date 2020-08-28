@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import ptBR from 'date-fns/locale/pt-BR';
 import { isToday, format, isAfter } from 'date-fns';
@@ -148,7 +148,9 @@ const Dashboard: React.FC = () => {
             <img src={user.avatar_url} alt={user.name}></img>
             <div>
               <span>Bem-vindo,</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
 
@@ -211,7 +213,7 @@ const Dashboard: React.FC = () => {
                 <p>Nenhum agendamento neste período</p>
               )}
               {afternoonAppointments.map((appointment) => (
-                <Appointment key={appointment.id}>
+                <Appointment key={appointment.date}>
                   <span>
                     <FiClock />
                     {appointment.hourFormatted}

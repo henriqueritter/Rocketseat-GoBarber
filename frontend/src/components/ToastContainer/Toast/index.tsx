@@ -39,7 +39,7 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
   return (
     <Container
       type={message.type}
-      hasDescription={Number(!!message.description)} //Transforma o message description em boolean
+      hasdescription={Number(!!message.description)} //Transforma o message description em boolean
       style={style}
     >
       {/* Exibe os icones com base na interface criada */}
