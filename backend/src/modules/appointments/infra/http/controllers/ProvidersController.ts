@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
-// injecao de dependencia
+import { classToClass } from 'class-transformer';
 
+// injecao de dependencia
 import ListProvidersService from '@modules/appointments/services/ListProvidersService';
 
 export default class ProvidersController {
@@ -14,7 +15,7 @@ export default class ProvidersController {
     const providers = await listProviders.execute({
       user_id,
     });
-    return response.json(providers);
+    return response.json(classToClass(providers));
     // se houver algum erro no execute(retornado pelo throw) ele executara nesse catch
     // a mensagem vem daquela digitada no Error do services
   }
