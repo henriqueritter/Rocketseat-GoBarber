@@ -6,7 +6,7 @@
 
 
 ### :clipboard: Sobre
-GoBarber é uma aplicação Web e Mobile que tem o intuito de facilitar a agenda de barbearias e clientes.
+Construído como projeto principal do Bootcamp GoStack 12 o GoBarber é uma aplicação Web e Mobile que tem o intuito de facilitar a agenda de barbearias e clientes.
 
 ### :checkered_flag: Aplicação Web
 <p align="center">
